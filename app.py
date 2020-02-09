@@ -9,8 +9,6 @@ from stop_words import stops
 from collections import Counter
 from bs4 import BeautifulSoup
 
-nltk.download('punkt')
-
 app = Flask(__name__)
 app.config.from_object(os.environ['APP_SETTINGS'])
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
