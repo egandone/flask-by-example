@@ -1,0 +1,13 @@
+[Unit]
+Description=uWSGI instance to serve flask-by-example
+After=network.target
+
+[Service]
+User=app1
+Group=nginx
+WorkingDirectory=/home/app1/flask-by-example
+Environment="PATH=/home/app1/flask-by-example/.venv/bin"
+ExecStart=/home/app1/flask-by-example/.venv/bin/uwsgi --ini flask-by-example.ini
+
+[Install]
+WantedBy=multi-user.target
