@@ -8,6 +8,7 @@ Group=nginx
 WorkingDirectory=/home/app1/flask-by-example
 Environment="PATH=/home/app1/flask-by-example/.venv/bin"
 Environment="APP_SETTINGS=config.ProductionConfig"
+Environment="DATABASE_URI=postgresql://username:password@localhost/wordcount_prd"
 ExecStart=/home/app1/flask-by-example/.venv/bin/uwsgi --ini flask-by-example.ini
 
 [Install]
