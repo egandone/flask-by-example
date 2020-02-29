@@ -1,5 +1,6 @@
 [Unit]
 Description=Background worker process for flask-by-example webapp
+Requires=redis.service
 After=network.target
 
 [Service]

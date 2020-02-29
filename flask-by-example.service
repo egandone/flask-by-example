@@ -1,5 +1,6 @@
 [Unit]
 Description=uWSGI instance to serve flask-by-example
+Requires=flask-by-example-worker.service
 After=network.target
 
 [Service]
