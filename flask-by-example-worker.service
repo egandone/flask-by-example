@@ -1,0 +1,15 @@
+[Unit]
+Description=Background worker process for flask-by-example webapp
+After=network.target
+
+[Service]
+User=app1
+Group=nginx
+WorkingDirectory=/home/app1/flask-by-example
+Environment="PATH=/home/app1/flask-by-example/.venv/bin"
+Environment="APP_SETTINGS=config.ProductionConfig"
+Environment="DATABASE_URI=postgresql://username:password@localhost/wordcount_prd"
+ExecStart=/home/app1/flask-by-example/.venv/bin/python worker.py
+
+[Install]
+WantedBy=multi-user.target
