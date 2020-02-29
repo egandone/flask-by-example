@@ -9,7 +9,6 @@ class Config(object):
     SECRET_KEY = 'this-really-needs-to-be-changed'
     SQLALCHEMY_DATABASE_URI = os.getenv('DATABASE_URI')
 
-
 class ProductionConfig(Config):
     DEBUG = False
 
