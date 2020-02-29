@@ -1,6 +1,6 @@
 [Unit]
 Description=Background worker process for flask-by-example webapp
-Requires=redis.service
+Requires=redis.service postgresql-12.service
 After=network.target
 
 [Service]

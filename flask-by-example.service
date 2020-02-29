@@ -1,6 +1,6 @@
 [Unit]
 Description=uWSGI instance to serve flask-by-example
-Requires=flask-by-example-worker.service
+Requires=flask-by-example-worker.service postgresql-12.service
 After=network.target
 
 [Service]
